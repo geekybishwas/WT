@@ -10,7 +10,7 @@ html,
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     line-height: 1.7em;
-    background: url('./photo.png') no-repeat center center/cover;
+    background: url('./image/photo.png') no-repeat center center/cover;
     overflow: scroll;
 }
 
