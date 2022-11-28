@@ -25,4 +25,4 @@
 ## .box-5 
 ## .box-6 
 ## .clr 
-## #main-foote
+## #main-footer
