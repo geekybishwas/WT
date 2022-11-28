@@ -17,7 +17,7 @@
 ## .box-1 
 ## .bg-light 
 ## .bg-dark 
-## .bf-primary 
+## .bg-primary 
 ## .primary 
 ## .box-2 
 ## .box-3 
