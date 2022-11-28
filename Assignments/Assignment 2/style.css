@@ -18,13 +18,13 @@ body {
 /* Utilitis Classes */
 
 .bg-dark {
-    background: #333;
+    background: hsl(0, 20%, 50%);
     color: #fff;
 }
 
 .bg-light {
-    background: #f4f4f4;
-    color: #333;
+    background: hsla(189, 6%, 3%, 0.8);
+    color: #fff;
 }
 
 .bg-primary {
