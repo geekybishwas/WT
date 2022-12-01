@@ -6,4 +6,6 @@
 ## Borders : (http://127.0.0.1:5500/Assignments/Assignment%203/dotted.html)
 
 ## Buttons:
-![]
+![buttons](https://user-images.githubusercontent.com/98906853/205121647-1d497fa2-8093-4a79-ac43-6c7abb4c58a9.png)
+
+## BORDERS :
