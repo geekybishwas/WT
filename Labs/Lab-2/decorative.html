@@ -7,23 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decorative</title>
     <style>
-        h1 {
-            width: 40%;
-            border: 2px solid grey;
-            /* height: 300px; */
-            max-height: 5%;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
         
-        .i {
-            height: 400px;
-            border: 2px solid red;
+        .box {
+            position: relative;
+            width: 85.7%;
+            max-width: 1400px;
+            /* max-w%dth: 1200px; */
+            height: 30vh;
+            box-shadow: 0px 0px 10px -1px rgba(89, 77, 77, 0.7);
+            top: 74px;
+            left: 80px;
+            border-style: none;
+            border-radius: 10px;
+            padding: 18px 25px;
+            z-index: 1;
+        }
+        
+        .box p {
+            font-size: 16px;
+            font-weight: 550;
+        }
+        
+        img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            z-index: 0;
+        }
+        
+        .pht1 {
+            top: 58px;
+            left: 5px;
+        }
+        
+        .pht2 {
+            top: 30px;
+            left: 50px;
+        }
+        
+        .pht3 {
+            top: 35%;
+            left: 75%;
+        }
+        
+        .pht4 {
+            top: 24%;
+            left: 79%;
         }
     </style>
 </head>
 
 <body>
-    <div class="i">
-        <h1>I am a heading</h1>
+    <div id="container">
+        <div class="box">
+            <p class="hello">Hello World</p>
+        </div>
+        <img src="./decorative-1.svg" class="pht1" alt="image">
+        <img src="./decorative-2.svg" class="pht2" alt="image">
+        <img src="./decorative-3.svg" class="pht3" alt="image">
+        <img src="./decorative-4.svg" class="pht4" alt="image">
     </div>
 </body>
 
