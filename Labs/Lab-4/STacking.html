@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            background: blue;
+        }
+        
+        .box1 {
+            width: 15rem;
+            height: 15rem;
+            position: relative;
+            margin: 1rem 0.8rem 0rem;
+            background: linear-gradient(to bottom, green, yellow);
+        }
+        
+        .box2 {
+            width: 15rem;
+            height: 15rem;
+            position: absolute;
+            top: 5rem;
+            left: 5rem;
+            background: linear-gradient(to left, black, purple);
+        }
+        
+        .box3 {
+            width: 15rem;
+            height: 15rem;
+            position: absolute;
+            top: 10rem;
+            left: 10rem;
+            background: linear-gradient(to top, red, blue);
+        }
+        
+        p {
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            word-spacing: 0.3rem;
+            position: absolute;
+            top: 24rem;
+            left: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+    <p class="whichClick"></p>
+    <script>
+        let ZINDEX = 1;
+        const boxes = document.querySelectorAll(".box");
+        const which = document.querySelector(".whichClick");
+        console.log(boxes);
+        for (let i = 0; i < boxes.length; i++) {
+            console.log(boxes[i]);
+            // boxes[i].style.cursor = "grab";
+            boxes[i].addEventListener("click", function() {
+                which.style.display = "block";
+                boxes[i].style.zIndex = ZINDEX++;
+                boxes[i].style.cursor = "pointer";
+                which.innerHTML = `Box ${i + 1} is clicked.`;
+            });
+            which.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

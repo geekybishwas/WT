@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onblur Event</title>
+    <style>
+        label {
+            font-size: 1.6rem;
+        }
+        
+        input {
+            padding: 0.8rem 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML DOM Events</h1>
+    <h2>The blur Event</h2>
+    <label for="text">Enter a number :</label>
+    <input type="text" name="text" id="text" onblur="myFunction()" />
+
+    <script>
+        const check = document.querySelector("#text");
+
+        function myFunction() {
+            let x = document.getElementById("text");
+            console.log(x);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validated Input</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        
+        form {
+            margin: 1rem;
+        }
+        
+        .submit {
+            padding: 0.3rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+    <form id="form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <br /><br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+        <br /><br />
+        <button type="submit" class="submit">Submit</button>
+        <p class="fill"></p>
+    </form>
+</head>
+
+<body>
+    <script>
+        const email = document.querySelector("#email");
+        const pass = document.querySelector("#password");
+        const submit = document.querySelector(".submit");
+        submit.addEventListener("click", function() {
+            let checking = true;
+            if (!email.value || !pass.value) {
+                alert("Please fill out email and password");
+            }
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                    email.value
+                )) {
+                alert("Email must be valid.");
+                checking = false;
+            }
+            if (checking) alert("Submit Successfully");
+        });
+    </script>
+</body>
+
+</html>

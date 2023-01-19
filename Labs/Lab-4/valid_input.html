@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validated Email</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        
+        form {
+            margin: 1rem;
+        }
+        
+        .form-control,
+        .submit {
+            padding: 0.3rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <label for="name">Name</label>
+        <input type="text" id="name" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" />
+        <br /><br />
+        <label for="phone">Contact Number:</label>
+        <input type="tel" id="phone" name="phone" />
+        <br /><br />
+        <label for="country">Country :</label>
+        <select id="country" name="country" class="form-control">
+                <option value="US">US</option>
+                <option value="Nepal" selected>Nepal</option>
+                <option value="Uk">Uk</option>
+                <option value="India">India</option>
+            </select>
+        <br /><br />
+        <button type="submit" class="submit">Submit</button>
+    </form>
+    <script>
+        "use strict";
+        const Name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const password = document.getElementById("phone");
+        const submit = document.querySelector(".submit");
+        submit.addEventListener("click", function() {
+            let check = true;
+            if (!email.value || !password.value || Name.innerHTML) {
+                email.style.background = "red";
+                password.style.background = "red";
+                Name.style.background = "red";
+                alert("All Fields must be filled out");
+                check = false;
+            }
+            let checking = true;
+            if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(
+                    email.value
+                )) {
+                alert("Email must be valid");
+                checking = false;
+            }
+            if (check && checking) {
+                alert("Your form is submitted succesfully");
+            }
+        });
+    </script>
+</body>
+
+</html>
